@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @question.title %>
+</p>
+
+<p>
+  <strong>Op1:</strong>
+  <%= @question.op1 %>
+</p>
+
+<p>
+  <strong>Op2:</strong>
+  <%= @question.op2 %>
+</p>
+
+<p>
+  <strong>Op3:</strong>
+  <%= @question.op3 %>
+</p>
+
+<p>
+  <strong>Op4:</strong>
+  <%= @question.op4 %>
+</p>
+
+<p>
+  <button type="button" id="js-click-answer" onclick="$('#js-correct-answer').show();">Show</button>
+</p>
+
+<p style="display: none;" id="js-correct-answer">
+  <strong>Cor:</strong>
+  <%= @question.cor %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
